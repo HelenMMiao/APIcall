@@ -51,7 +51,7 @@ class FirebaseDownloadApp:
                 file.write(chunk)
         print(f"Downloaded {output_file}")
     
-    def download_track_apk(self):
+    def download_apk(self):
         output_file = os.path.abspath(f'{ROOT_DIR}/test_data/app.apk') 
         # Remove apk files if exits
         file_names = os.listdir(os.path.abspath(f'{ROOT_DIR}/test_data'))
@@ -90,4 +90,4 @@ class downloadApp(FirebaseDownloadApp):
 
 if __name__ == '__main__':
     download_track = downloadApp(displayVersion="6.2.1.410")
-    download_track.download_track_apk()
+    download_track.download_apk()
